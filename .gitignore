@@ -1,0 +1,3 @@
+/volumes/airflow/logs/*
+/volumes/airflow/plugins/*
+.env
