@@ -11,5 +11,5 @@ if [ -z $AIRFLOW_UID ]; then
   echo "AIRFLOW_UID=$(id -u)" >> .env
 fi
 
-#docker compose up airflow-init
+docker compose up airflow-init
 docker compose up -d
