@@ -1,3 +1,12 @@
-/volumes/airflow/logs/*
-/volumes/airflow/plugins/*
+/volumes/airflow/logs
+/volumes/airflow/plugins
 .env
+.venv
+
+renv
+r-plumber.Rproj
+renv.lock
+.Rproj.user
+.Rprofile
+.Rhistory
+__pycache__*
