@@ -283,6 +283,20 @@ services:
       <<: *airflow-common-depends-on
       airflow-init:
         condition: service_completed_successfully
+  
+  r-plumber:
+    build:
+      context: ./
+      args:
+        R_PLUMBER_HOME: "${R_PLUMBER_HOME}"
+    container_name: r-plumber
+    environment:
+      R_PLUMBER_HOME: "${R_PLUMBER_HOME}"
+    command: Rscript ${R_PLUMBER_HOME}/main.R
+    volumes:
+      - ./volumes/r-plumber/src:${R_PLUMBER_HOME}
+    ports:
+      - "8000:8000"
 
 volumes:
   postgres-db-volume:
