@@ -295,8 +295,6 @@ services:
     command: Rscript ${R_PLUMBER_HOME}/main.R
     volumes:
       - ./volumes/r-plumber/src:${R_PLUMBER_HOME}
-    ports:
-      - "8000:8000"
 
 volumes:
   postgres-db-volume:
